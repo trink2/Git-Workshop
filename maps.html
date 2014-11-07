@@ -37,8 +37,18 @@ document.getElementById("map").reload(true);
 }	
 
 </script>
-<input  id= "sitio">sitio</input>
+<input  id= "site">sitio</input>
+<button id = "busqueda_sitio" onClick="search_sitio()">busqueda por sitio</button>
 
+<script>
+function search_sitio(){
+var site = document.getElementById("site").value;
+document.getElementById("map").src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+site;
+document.getElementById("map").reload(true);	
+	
+}
+
+</script>
 
 
 </body>
