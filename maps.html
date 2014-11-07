@@ -31,7 +31,7 @@
    <br>
    <H3>Busqueda por Sitio Emblematico</H3>
    Sitio : <input id="sitText" type="text" name="fname"><br>
-
+   <input type="submit" onclick="sitio()" value="Encontrar">
 <script language="JavaScript"> 
 function pregunta(){ 
    //alert(document.getElementById('addressText').value); 
@@ -42,6 +42,11 @@ function coordenadas(){
 document.getElementById('mapView').src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&center="+document.getElementById('latText').value+","+document.getElementById('lonText').value+"&zoom=18";
 
 	}
+ 
+ function sitio(){
+ 	document.getElementById('mapView').src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+document.getElementById('sitText').value;
+ }
+
 </script>
 
 </body>
