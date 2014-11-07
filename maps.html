@@ -26,5 +26,17 @@ document.getElementById("map").reload(true);
 </script>
 <input  id= "latitud">latitud</input>
 <input  id= "longitud">longitud</input>
+<button id = "buscarcoord" onClick="search_coor()">busqueda por coordenadas</button>
+
+<script>
+function search_coor(){
+var latitud = document.getElementById("latitud").value;
+var longitud = document.getElementById("longitud").value;
+document.getElementById("map").src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&center="+latitud+","+longitud+"&zoom=18";
+document.getElementById("map").reload(true);	
+}	
+
+</script>
+
 </body>
 </html>
