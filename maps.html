@@ -1,17 +1,27 @@
 <html>
-<head>
+<head><center><h1>
 Taller
-</head>
+</head></center></h1>
 <body>
 <iframe
+id = "map"
   width="600"
   height="450"
   frameborder="0" style="border:0"
   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g
     &q=Bogota">
 </iframe>
-<h1>
-<input>direccion</input>
-</h1>
+
+<input  id= "address">direccion</input>
+<button id = "buscar" onClick="search()">buscar</button>
+
+<script>
+function search(){
+var dir = document.getElementById("address").value;
+document.getElementById("map").src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+dir;
+document.getElementById("map").reload(true);	
+	
+}
+</script>
 </body>
 </html>
