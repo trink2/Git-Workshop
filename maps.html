@@ -18,9 +18,12 @@ id = "map"
 <script>
 function search(){
 var dir = document.getElementById("address").value;
+if(dir == ""){
+		alert("Vacio");
+}else{
 document.getElementById("map").src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+dir;
 document.getElementById("map").reload(true);	
-	
+	}
 }
 
 </script>
@@ -32,8 +35,12 @@ document.getElementById("map").reload(true);
 function search_coor(){
 var latitud = document.getElementById("latitud").value;
 var longitud = document.getElementById("longitud").value;
+if(latitud == "" || longitud == ""){
+		alert("Vacio");
+}else{
 document.getElementById("map").src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&center="+latitud+","+longitud+"&zoom=18";
 document.getElementById("map").reload(true);	
+}
 }	
 
 </script>
@@ -43,11 +50,13 @@ document.getElementById("map").reload(true);
 <script>
 function search_sitio(){
 var site = document.getElementById("site").value;
+if(site == ""){
+		alert("Vacio");
+}else{
 document.getElementById("map").src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+site;
 document.getElementById("map").reload(true);	
-	
+	}
 }
-
 </script>
 
 
