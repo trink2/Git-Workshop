@@ -19,18 +19,18 @@
 <br>
 <br>
 
-  Direccion: <input id="addressText" type="text" name="fname"><br>
-  <input type="submit" onclick="pregunta()" value="Consultar">
+  Direccion: <input id="addressText" type="text" name="fname" onPaste="" onkeydown="if (event.keyCode == 13) { pregunta();return false;}"><br>
+  <input type="submit" onclick="pregunta()" value="Consultar"  >
   <br>
   <br>
   <h3>Busqueda por coordenadas</h3>
    Latitud	: <input id="latText" type="text" name="fname"><br>
-   Longitud	: <input id="lonText" type="text" name="fname"><br>
+   Longitud	: <input id="lonText" type="text" name="fname" onPaste="" onkeydown="if (event.keyCode == 13) { coordenadas();return false;}" ><br>
    <input type="submit" onclick="coordenadas()" value="Busqueda">
    <br>
    <br>
    <H3>Busqueda por Sitio Emblematico</H3>
-   Sitio : <input id="sitText" type="text" name="fname"><br>
+   Sitio : <input id="sitText" type="text" name="fname" onPaste="" onkeydown="if (event.keyCode == 13) { sitio();return false;}"><br>
    <input type="submit" onclick="sitio()" value="Encontrar">
 <script language="JavaScript"> 
 function pregunta(){ 
