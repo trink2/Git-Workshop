@@ -27,38 +27,5 @@ document.getElementById("map").reload(true);
 }
 
 </script>
-<input  id= "latitud">latitud</input>
-<input  id= "longitud">longitud</input>
-<button id = "buscarcoord" onClick="search_coor()">busqueda por coordenadas</button>
-
-<script>
-function search_coor(){
-var latitud = document.getElementById("latitud").value;
-var longitud = document.getElementById("longitud").value;
-if(latitud == "" || longitud == ""){
-		alert("Vacio");
-}else{
-document.getElementById("map").src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&center="+latitud+","+longitud+"&zoom=18";
-document.getElementById("map").reload(true);	
-}
-}	
-
-</script>
-<input  id= "site">sitio</input>
-<button id = "busqueda_sitio" onClick="search_sitio()">busqueda por sitio</button>
-
-<script>
-function search_sitio(){
-var site = document.getElementById("site").value;
-if(site == ""){
-		alert("Vacio");
-}else{
-document.getElementById("map").src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+site;
-document.getElementById("map").reload(true);	
-	}
-}
-</script>
-
-
 </body>
 </html>
