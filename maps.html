@@ -26,11 +26,17 @@
   <h3>Busqueda por coordenadas</h3>
    Latitud	: <input id="latText" type="text" name="fname"><br>
    Longitud	: <input id="lonText" type="text" name="fname"><br>
+   <input type="submit" onclick="coordenadas()" value="Busqueda">
 <script language="JavaScript"> 
 function pregunta(){ 
    //alert(document.getElementById('addressText').value); 
 document.getElementById('mapView').src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+document.getElementById('addressText').value+",Bogota";
 } 
+function coordenadas(){ 
+
+document.getElementById('mapView').src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&center="+document.getElementById('latText').value+","+document.getElementById('lonText').value+"&zoom=18";
+
+	}
 </script>
 
 </body>
