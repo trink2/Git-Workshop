@@ -56,6 +56,9 @@ function search(){
 var dir = document.getElementById("address").value;
 if(dir == ""){
     alert("Vacio");
+}
+else if(dir == "!" || dir == "." ||dir == "#" ||dir == "$" ||dir == "%" ||dir == "&"||dir == "/"||dir == "("||dir == ")"||dir == "?"||dir == "¡"){
+    alert("Error character");
 }else{
 document.getElementById("mapView").src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+dir;
 document.getElementById("mapView").reload(true);  
