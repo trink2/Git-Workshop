@@ -1,5 +1,6 @@
 <html>
 
+
 <head>
 
 <title>Sitios emblematicos	</title>
@@ -10,11 +11,11 @@
 <body>
 	<iframe
 	id="mapView"
+
   width="600"
   height="450"
   frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g
-    &q=Bogota&maptype=satellite">
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q=Bogota&maptype=satellite">
 </iframe>
 <br>
 <br>
@@ -31,7 +32,11 @@
    <br>
    <H3>Busqueda por Sitio Emblematico</H3>
    Sitio : <input id="sitText" type="text" name="fname" onPaste="" onkeydown="if (event.keyCode == 13) { sitio();return false;}"><br>
+   
    <input type="submit" onclick="sitio()" value="Encontrar">
+   <H3>Busqueda por dirrecion</H3>
+   <input  id= "address">direccion</input>
+<button id = "buscar" onClick="search()">buscar</button>
 <script language="JavaScript"> 
 function pregunta(){ 
    //alert(document.getElementById('addressText').value); 
@@ -47,8 +52,20 @@ document.getElementById('mapView').src="https://www.google.com/maps/embed/v1/vie
  	document.getElementById('mapView').src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+document.getElementById('sitText').value+"&maptype=satellite";
  }
 
+function search(){
+var dir = document.getElementById("address").value;
+if(dir == ""){
+    alert("Vacio");
+}else{
+document.getElementById("mapView").src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+dir;
+document.getElementById("mapView").reload(true);  
+  }
+
+
+}
 </script>
 
 </body>
+
 
 </html>
