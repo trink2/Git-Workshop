@@ -25,8 +25,8 @@
   <br>
   <br>
   <h3>Busqueda por coordenadas</h3>
-   Latitud	: <input id="latText" type="text" name="fname"><br>
-   Longitud	: <input id="lonText" type="text" name="fname" onPaste="" onkeydown="if (event.keyCode == 13) { coordenadas();return false;}" ><br>
+   Latitud	: <input id="latText" type="text" name="fname" onkeypress="return justNumbers(event);"><br>
+   Longitud	: <input id="lonText" type="text" name="fname" onkeypress="return justNumbers(event);" onPaste="" onkeydown="if (event.keyCode == 13) { coordenadas();return false;}" ><br>
    <input type="submit" onclick="coordenadas()" value="Busqueda">
    <br>
    <br>
@@ -49,7 +49,7 @@ document.getElementById('mapView').src="https://www.google.com/maps/embed/v1/vie
 	}
  
  function sitio(){
- 	document.getElementById('mapView').src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+document.getElementById('sitText').value+"&maptype=satellite";
+ 	document.getElementById('mapView').src="https://www.google.com/maps/embed/v1/place?key=AImzaSyBnVYq8QtG6kCRrtFed_2knUIDaGdSq29g&q="+document.getElementById('sitText').value+"&maptype=satellite";
  }
 
 function search(){
@@ -65,6 +65,15 @@ document.getElementById("mapView").reload(true);
   }
 
 
+}
+
+function justNumbers(e)
+{
+var keynum = window.event ? window.event.keyCode : e.which;
+if ((keynum == 8) || (keynum == 46))
+return true;
+ 
+return /\d/.test(String.fromCharCode(keynum));
 }
 </script>
 
